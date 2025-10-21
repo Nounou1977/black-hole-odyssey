@@ -1,0 +1,14 @@
+﻿# BlackHole Academy - Robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://Nounou1977.github.io/blackhole-academy/sitemap.xml
+
+# Crawl-delay (optionnel, pour éviter surcharge serveur)
+Crawl-delay: 1
+
+# Disallow admin ou fichiers privés (si vous en avez)
+# Disallow: /admin/
+# Disallow: /private/
