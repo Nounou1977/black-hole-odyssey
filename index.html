@@ -3,318 +3,766 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Hole Odyssey - Explorez les MystËres des Trous Noirs</title>
-    <meta name="description" content="DÈcouvrez les secrets fascinants des trous noirs avec notre guide Èducatif interactif. Quiz, animations et ebook gratuit !">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="D√©couvrez tout sur les trous noirs : formation, types, caract√©ristiques et myst√®res de l'univers. Guide √©ducatif complet avec quiz interactif et ebook gratuit.">
+    <meta name="keywords" content="trous noirs, astronomie, espace, univers, physique, √©ducation, apprentissage, ebook gratuit, quiz astronomie">
+    <meta name="author" content="BlackHole Academy">
+    <meta property="og:title" content="BlackHole Academy - Ma√Ætrisez les Secrets des Trous Noirs">
+    <meta property="og:description" content="Formation gratuite sur les trous noirs avec quiz interactif et ebook offert">
+    <meta property="og:type" content="website">
+    <title>BlackHole Academy - Percez les Myst√®res des Trous Noirs | Guide Complet 2025</title>
     <style>
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #0a0a1a 100%);
+            min-height: 100vh;
         }
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.5); }
-            50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8); }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        .float { animation: float 6s ease-in-out infinite; }
-        .rotate { animation: rotate 20s linear infinite; }
-        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
-        .star { position: absolute; background: white; border-radius: 50%; opacity: 0.8; }
-        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .black-hole { 
-            width: 200px; 
-            height: 200px; 
-            background: radial-gradient(circle, transparent 30%, #000 50%, #1a0033 100%);
-            border-radius: 50%;
+        
+        header {
+            background: linear-gradient(135deg, rgba(15, 12, 41, 0.9), rgba(48, 43, 99, 0.8));
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(138, 43, 226, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid rgba(138, 43, 226, 0.5);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .logo-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            background: linear-gradient(45deg, #8a2be2, #4169e1, #00bfff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+        }
+        
+        .tagline {
+            color: #b8b8d1;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        
+        nav {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: #c0c0d0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        
+        nav a:hover {
+            color: #8a2be2;
+            background: rgba(138, 43, 226, 0.1);
+        }
+        
+        .hero {
+            background: radial-gradient(circle at center, rgba(138, 43, 226, 0.2), transparent);
+            padding: 60px 20px;
+            text-align: center;
+            margin: 40px 0;
+            border-radius: 20px;
             position: relative;
+            overflow: hidden;
         }
-        .accretion-disk {
+        
+        .hero::before {
+            content: '';
             position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.3), transparent);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.2); }
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            color: #fff;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero p {
+            font-size: 1.3em;
+            color: #c0c0d0;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .section h2 {
+            color: #8a2be2;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #4169e1;
+            padding-bottom: 15px;
+        }
+        
+        .section h3 {
+            color: #4169e1;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .section p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #d0d0e0;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(65, 105, 225, 0.2));
+            border-left: 4px solid #8a2be2;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(65, 105, 225, 0.15));
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            color: #00bfff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .quiz-container {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(65, 105, 225, 0.15));
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            border: 2px solid rgba(138, 43, 226, 0.5);
+        }
+        
+        .quiz-selector {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .quiz-tab {
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 10px;
+            color: #c0c0d0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .quiz-tab.active {
+            background: linear-gradient(135deg, #8a2be2, #4169e1);
+            border-color: #8a2be2;
+            color: white;
+        }
+        
+        .quiz-tab:hover {
+            border-color: #8a2be2;
+        }
+        
+        .quiz-content {
+            display: none;
+        }
+        
+        .quiz-content.active {
+            display: block;
+        }
+        
+        .quiz-question {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+        }
+        
+        .quiz-question h4 {
+            color: #00bfff;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .quiz-options label {
+            display: block;
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+        }
+        
+        .quiz-options label:hover {
+            background: rgba(138, 43, 226, 0.2);
+            border-color: #8a2be2;
+            transform: translateX(5px);
+        }
+        
+        .quiz-options input[type="radio"] {
+            margin-right: 10px;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .blog-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.4);
+            border-color: #8a2be2;
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.3), rgba(65, 105, 225, 0.3));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+        }
+        
+        .blog-content {
+            padding: 25px;
+        }
+        
+        .blog-date {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        .blog-content h3 {
+            color: #8a2be2;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .blog-excerpt {
+            color: #c0c0d0;
+            line-height: 1.6;
+        }
+        
+        .newsletter-box {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(65, 105, 225, 0.2));
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid rgba(138, 43, 226, 0.5);
+            margin: 40px 0;
+        }
+        
+        .newsletter-box h3 {
+            color: #8a2be2;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        
+        .newsletter-box p {
+            color: #c0c0d0;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            min-width: 250px;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid rgba(138, 43, 226, 0.5);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 1em;
+        }
+        
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: #8a2be2;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #8a2be2, #4169e1);
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.3em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.4);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(138, 43, 226, 0.6);
+        }
+        
+        .secondary-button {
+            background: transparent;
+            color: #8a2be2;
+            border: 2px solid #8a2be2;
+            padding: 15px 35px;
+            font-size: 1.1em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .secondary-button:hover {
+            background: rgba(138, 43, 226, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            border: 3px solid transparent;
-            border-top-color: #f59e0b;
-            border-right-color: #f59e0b;
-            border-radius: 50%;
-            opacity: 0.7;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background: linear-gradient(135deg, #1a0a2e, #2d1b4e);
+            padding: 50px;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            border: 2px solid #8a2be2;
+            box-shadow: 0 0 50px rgba(138, 43, 226, 0.5);
+            animation: slideIn 0.5s ease;
+            margin: 20px auto;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .modal h2 {
+            color: #8a2be2;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .modal p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #d0d0e0;
+        }
+        
+        .score-display {
+            font-size: 3em;
+            color: #00bfff;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        .form-group {
+            margin: 20px 0;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid rgba(138, 43, 226, 0.5);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 1.1em;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #8a2be2;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+        }
+        
+        .ebook-preview {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(65, 105, 225, 0.1));
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(138, 43, 226, 0.3);
+        }
+        
+        .ebook-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+            border-color: #8a2be2;
+        }
+        
+        .feature-card h4 {
+            color: #00bfff;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .resource-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            border-color: #8a2be2;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+        }
+        
+        .resource-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .resource-card h4 {
+            color: #8a2be2;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+        
+        footer {
+            background: rgba(15, 12, 41, 0.8);
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 2px solid rgba(138, 43, 226, 0.5);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-section h4 {
+            color: #8a2be2;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: #c0c0d0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: #8a2be2;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            font-size: 1.8em;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(138, 43, 226, 0.3);
+            color: #888;
+        }
+        
+        .ad-space {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 20px;
+            text-align: center;
+            margin: 30px 0;
+            border-radius: 10px;
+            border: 1px dashed rgba(138, 43, 226, 0.3);
+            color: #888;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .modal-content {
+                padding: 30px 20px;
+            }
+            
+            nav {
+                justify-content: center;
+            }
+            
+            .header-content {
+                justify-content: center;
+                text-align: center;
+            }
         }
     </style>
 </head>
-<body class="bg-gradient-to-b from-gray-900 via-purple-900 to-black text-white">
-    <!-- Stars Background -->
-    <div id="stars" class="fixed inset-0 overflow-hidden pointer-events-none"></div>
-
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center px-4">
-        <div class="max-w-6xl mx-auto text-center z-10">
-            <div class="black-hole mx-auto mb-8 float pulse-glow">
-                <div class="accretion-disk rotate"></div>
-                <div class="accretion-disk rotate" style="animation-delay: -10s;"></div>
-            </div>
-            <h1 class="text-6xl md:text-8xl font-bold mb-6 gradient-text">Black Hole Odyssey</h1>
-            <p class="text-xl md:text-2xl mb-8 text-purple-200">Plongez dans l'univers fascinant des trous noirs</p>
-            <button onclick="scrollToSection('education')" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105 shadow-2xl">
-                Commencer l'Exploration ??
-            </button>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="py-20 px-4 relative">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-5xl font-bold text-center mb-16 gradient-text">Qu'est-ce qu'un Trou Noir ?</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8 mb-16">
-                <div class="bg-gradient-to-br from-purple-900/50 to-blue-900/50 p-8 rounded-2xl backdrop-blur border border-purple-500/30 hover:scale-105 transition">
-                    <div class="text-5xl mb-4">??</div>
-                    <h3 class="text-2xl font-bold mb-4">Formation</h3>
-                    <p class="text-purple-200">Les trous noirs se forment lors de l'effondrement gravitationnel d'Ètoiles massives en fin de vie, crÈant une singularitÈ o˘ la gravitÈ devient infiniment forte.</p>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">üåå BlackHole Academy</div>
+                    <div class="tagline">Percez les Myst√®res de l'Univers</div>
                 </div>
-                
-                <div class="bg-gradient-to-br from-blue-900/50 to-purple-900/50 p-8 rounded-2xl backdrop-blur border border-blue-500/30 hover:scale-105 transition">
-                    <div class="text-5xl mb-4">?</div>
-                    <h3 class="text-2xl font-bold mb-4">Horizon des …vÈnements</h3>
-                    <p class="text-purple-200">C'est la limite de non-retour au-del‡ de laquelle mÍme la lumiËre ne peut s'Èchapper. Une fois franchie, rien ne peut revenir en arriËre.</p>
-                </div>
-                
-                <div class="bg-gradient-to-br from-purple-900/50 to-pink-900/50 p-8 rounded-2xl backdrop-blur border border-pink-500/30 hover:scale-105 transition">
-                    <div class="text-5xl mb-4">??</div>
-                    <h3 class="text-2xl font-bold mb-4">Disque d'AccrÈtion</h3>
-                    <p class="text-purple-200">La matiËre en orbite autour du trou noir forme un disque brillant qui Èmet d'intenses radiations avant d'Ítre aspirÈe ‡ jamais.</p>
-                </div>
-            </div>
-
-            <div class="bg-gradient-to-r from-purple-800/30 to-pink-800/30 p-8 md:p-12 rounded-3xl backdrop-blur border border-purple-400/30">
-                <h3 class="text-3xl font-bold mb-6">Types de Trous Noirs</h3>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-black/40 p-6 rounded-xl">
-                        <h4 class="text-xl font-bold mb-3 text-yellow-400">?? Trous Noirs Stellaires</h4>
-                        <p class="text-purple-200">Masse de 3 ‡ 100 fois celle du Soleil. FormÈs par l'effondrement d'Ètoiles massives.</p>
-                    </div>
-                    <div class="bg-black/40 p-6 rounded-xl">
-                        <h4 class="text-xl font-bold mb-3 text-blue-400">?? Trous Noirs Supermassifs</h4>
-                        <p class="text-purple-200">Millions ‡ milliards de masses solaires. SituÈs au centre des galaxies, dont la nÙtre.</p>
-                    </div>
-                    <div class="bg-black/40 p-6 rounded-xl">
-                        <h4 class="text-xl font-bold mb-3 text-green-400">?? Trous Noirs IntermÈdiaires</h4>
-                        <p class="text-purple-200">Entre 100 et 100 000 masses solaires. Leur existence est encore dÈbattue.</p>
-                    </div>
-                    <div class="bg-black/40 p-6 rounded-xl">
-                        <h4 class="text-xl font-bold mb-3 text-purple-400">?? Trous Noirs Primordiaux</h4>
-                        <p class="text-purple-200">ThÈoriquement formÈs peu aprËs le Big Bang. Encore jamais observÈs.</p>
-                    </div>
-                </div>
+                <nav>
+                    <a href="#home">Accueil</a>
+                    <a href="#cours">Cours</a>
+                    <a href="#quiz">Quiz</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#ressources">Ressources</a>
+                </nav>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Quiz Section -->
-    <section id="quiz" class="py-20 px-4 relative bg-black/40">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-5xl font-bold text-center mb-12 gradient-text">Testez Vos Connaissances ??</h2>
-            
-            <div id="quiz-container" class="bg-gradient-to-br from-purple-900/50 to-blue-900/50 p-8 rounded-3xl backdrop-blur border border-purple-500/30">
-                <div id="question-container">
-                    <h3 class="text-2xl font-bold mb-6" id="question"></h3>
-                    <div id="answers" class="space-y-4"></div>
-                </div>
-                <div id="result" class="hidden">
-                    <h3 class="text-3xl font-bold mb-4">RÈsultats</h3>
-                    <p class="text-xl mb-6" id="score"></p>
-                    <button onclick="restartQuiz()" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-full font-semibold transition">
-                        Recommencer
-                    </button>
-                </div>
+    <div class="container">
+        <section class="hero" id="home">
+            <h1>D√©couvrez les Secrets des Trous Noirs</h1>
+            <p>La formation compl√®te et gratuite pour comprendre les ph√©nom√®nes les plus fascinants de l'univers</p>
+            <div class="hero-cta">
+                <button class="cta-button" onclick="document.getElementById('quiz').scrollIntoView({behavior: 'smooth'})">üéØ Tester Mes Connaissances</button>
+                <button class="secondary-button" onclick="document.getElementById('newsletter').scrollIntoView({behavior: 'smooth'})">üìß S'Abonner</button>
+            </div>
+        </section>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">10K+</div>
+                <p>√âtudiants Actifs</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">500+</div>
+                <p>Articles √âducatifs</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">15</div>
+                <p>Quiz Interactifs</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">98%</div>
+                <p>Satisfaction</p>
             </div>
         </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section id="ebook" class="py-20 px-4 relative">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="bg-gradient-to-br from-purple-800/40 to-pink-800/40 p-12 rounded-3xl backdrop-blur border border-purple-400/40 shadow-2xl">
-                <div class="text-6xl mb-6">??</div>
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Votre Guide Gratuit</h2>
-                <h3 class="text-2xl md:text-3xl font-bold mb-4">Les Secrets des Trous Noirs RÈvÈlÈs</h3>
-                <p class="text-xl text-purple-200 mb-8">TÈlÈchargez notre ebook exclusif de 50 pages et devenez un expert des phÈnomËnes les plus mystÈrieux de l'univers !</p>
-                
-                <div class="max-w-md mx-auto mb-8">
-                    <ul class="text-left space-y-3">
-                        <li class="flex items-center">
-                            <span class="text-green-400 mr-3">?</span>
-                            <span>Comprendre la relativitÈ gÈnÈrale</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-green-400 mr-3">?</span>
-                            <span>Les derniËres dÈcouvertes scientifiques</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-green-400 mr-3">?</span>
-                            <span>Images et schÈmas explicatifs</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-green-400 mr-3">?</span>
-                            <span>Les trous de ver et voyages temporels</span>
-                        </li>
-                    </ul>
-                </div>
+        <div class="ad-space">Espace Publicitaire 1 - [Google AdSense 728x90]</div>
 
-                <form id="ebook-form" class="max-w-md mx-auto space-y-4">
-                    <input type="text" placeholder="Votre prÈnom" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-purple-400/50 text-white placeholder-purple-300 focus:outline-none focus:border-purple-400">
-                    <input type="email" placeholder="Votre email" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-purple-400/50 text-white placeholder-purple-300 focus:outline-none focus:border-purple-400">
-                    <button type="submit" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-8 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
-                        TÈlÈcharger Gratuitement ??
-                    </button>
-                </form>
-                
-                <p class="text-sm text-purple-300 mt-4">100% gratuit ï Aucune carte bancaire requise</p>
+        <article class="section" id="cours">
+            <h2>Qu'est-ce qu'un Trou Noir ?</h2>
+            <p>Les trous noirs repr√©sentent l'un des ph√©nom√®nes les plus extraordinaires et myst√©rieux de l'univers. Ce sont des r√©gions de l'espace-temps o√π la gravit√© est si intense que rien, pas m√™me la lumi√®re, ne peut s'en √©chapper une fois franchi l'horizon des √©v√©nements.</p>
+            
+            <div class="highlight-box">
+                <p><strong>Point cl√© :</strong> Un trou noir n'est pas un "trou" au sens litt√©ral, mais une concentration extr√™me de mati√®re dans un espace infiniment petit, cr√©ant une courbure extr√™me de l'espace-temps selon la th√©orie de la relativit√© g√©n√©rale d'Einstein.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="py-8 px-4 border-t border-purple-500/30">
-        <div class="max-w-6xl mx-auto text-center text-purple-300">
-            <p>© 2025 Black Hole Odyssey - Explorez l'Univers avec Passion</p>
-        </div>
-    </footer>
-
-    <script>
-        // Generate stars
-        const starsContainer = document.getElementById('stars');
-        for (let i = 0; i < 100; i++) {
-            const star = document.createElement('div');
-            star.className = 'star';
-            star.style.width = Math.random() * 3 + 'px';
-            star.style.height = star.style.width;
-            star.style.left = Math.random() * 100 + '%';
-            star.style.top = Math.random() * 100 + '%';
-            star.style.animationDelay = Math.random() * 3 + 's';
-            starsContainer.appendChild(star);
-        }
-
-        // Smooth scroll
-        function scrollToSection(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Quiz data
-        const quizData = [
-            {
-                question: "Qu'est-ce qui se passe au centre d'un trou noir ?",
-                answers: [
-                    { text: "Une singularitÈ de densitÈ infinie", correct: true },
-                    { text: "Un vortex temporel", correct: false },
-                    { text: "Une Ètoile compressÈe", correct: false },
-                    { text: "Un portail vers une autre dimension", correct: false }
-                ]
-            },
-            {
-                question: "Quelle est la vitesse nÈcessaire pour Èchapper ‡ un trou noir ?",
-                answers: [
-                    { text: "La vitesse du son", correct: false },
-                    { text: "Plus rapide que la lumiËre", correct: true },
-                    { text: "10 000 km/s", correct: false },
-                    { text: "C'est impossible", correct: false }
-                ]
-            },
-            {
-                question: "Qui a prÈdit l'existence des trous noirs ?",
-                answers: [
-                    { text: "Isaac Newton", correct: false },
-                    { text: "Stephen Hawking", correct: false },
-                    { text: "Albert Einstein (via la relativitÈ gÈnÈrale)", correct: true },
-                    { text: "Galileo Galilei", correct: false }
-                ]
-            },
-            {
-                question: "Quel est le trou noir le plus proche de la Terre ?",
-                answers: [
-                    { text: "Sagittarius A*", correct: false },
-                    { text: "Cygnus X-1", correct: false },
-                    { text: "Gaia BH1 (environ 1600 annÈes-lumiËre)", correct: true },
-                    { text: "M87*", correct: false }
-                ]
-            },
-            {
-                question: "Que se passerait-il si vous tombiez dans un trou noir ?",
-                answers: [
-                    { text: "Vous seriez instantanÈment vaporisÈ", correct: false },
-                    { text: "Vous seriez ÈtirÈ par les forces de marÈe (spaghettification)", correct: true },
-                    { text: "Vous voyageriez dans le temps", correct: false },
-                    { text: "Vous entreriez dans un univers parallËle", correct: false }
-                ]
-            }
-        ];
-
-        let currentQuestion = 0;
-        let score = 0;
-
-        function loadQuestion() {
-            const question = quizData[currentQuestion];
-            document.getElementById('question').textContent = `Question ${currentQuestion + 1}/${quizData.length}: ${question.question}`;
+            <h3>Formation des Trous Noirs</h3>
+            <p>Les trous noirs se forment principalement de trois fa√ßons diff√©rentes selon leur masse et leur origine cosmique.</p>
             
-            const answersContainer = document.getElementById('answers');
-            answersContainer.innerHTML = '';
+            <p><strong>Trous noirs stellaires :</strong> Ils naissent de l'effondrement gravitationnel d'√©toiles massives en fin de vie. Lorsqu'une √©toile ayant au moins 20 √† 25 fois la masse du Soleil √©puise son combustible nucl√©aire, elle s'effondre sur elle-m√™me en une fraction de seconde, cr√©ant une supernova suivie de la formation d'un trou noir.</p>
             
-            question.answers.forEach((answer, index) => {
-                const button = document.createElement('button');
-                button.className = 'w-full p-4 rounded-xl bg-purple-700/30 hover:bg-purple-600/50 border border-purple-500/50 transition text-left';
-                button.textContent = answer.text;
-                button.onclick = () => selectAnswer(answer.correct);
-                answersContainer.appendChild(button);
-            });
-        }
-
-        function selectAnswer(correct) {
-            if (correct) score++;
-            currentQuestion++;
+            <p><strong>Trous noirs supermassifs :</strong> Pr√©sents au centre de la plupart des galaxies, y compris notre Voie lact√©e, ces g√©ants contiennent des millions voire des milliards de fois la masse de notre Soleil. Leur formation reste un myst√®re actif de la recherche astronomique moderne.</p>
             
-            if (currentQuestion < quizData.length) {
-                loadQuestion();
-            } else {
-                showResults();
-            }
-        }
+            <p><strong>Trous noirs primordiaux :</strong> Th√©oriquement form√©s dans les premiers instants apr√®s le Big Bang, leur existence n'a pas encore √©t√© confirm√©e par l'observation directe.</p>
+        </article>
 
-        function showResults() {
-            document.getElementById('question-container').classList.add('hidden');
-            document.getElementById('result').classList.remove('hidden');
+        <div class="ad-space">Espace Publicitaire 2 - [Google AdSense 336x280]</div>
+
+        <article class="section">
+            <h2>Caract√©ristiques Fascinantes des Trous Noirs</h2>
             
-            const percentage = (score / quizData.length) * 100;
-            let message = '';
+            <h3>L'Horizon des √âv√©nements</h3>
+            <p>L'horizon des √©v√©nements repr√©sente le point de non-retour autour d'un trou noir. C'est la fronti√®re invisible au-del√† de laquelle la vitesse d'√©chappement d√©passe celle de la lumi√®re. Une fois cette limite franchie, m√™me la lumi√®re ne peut revenir en arri√®re, rendant le trou noir litt√©ralement invisible.</p>
             
-            if (percentage === 100) {
-                message = '?? Parfait ! Vous Ítes un expert des trous noirs !';
-            } else if (percentage >= 60) {
-                message = '?? TrËs bien ! Vous avez de solides connaissances !';
-            } else {
-                message = '?? Continuez ‡ apprendre, l\'univers vous attend !';
-            }
+            <h3>La Singularit√©</h3>
+            <p>Au c≈ìur d'un trou noir se trouve la singularit√©, un point o√π toute la mati√®re est compress√©e dans un espace de volume nul avec une densit√© infinie. √Ä cet endroit, les lois de la physique telles que nous les connaissons cessent de fonctionner.</p>
             
-            document.getElementById('score').innerHTML = `Vous avez obtenu <strong>${score}/${quizData.length}</strong> bonnes rÈponses !<br><br>${message}`;
-        }
+            <div class="highlight-box">
+                <p><strong>Fait surprenant :</strong> Le temps se dilate pr√®s d'un trou noir. Pour un observateur ext√©rieur, une personne tombant dans un trou noir semblerait ralentir puis se figer √† l'approche de l'horizon des √©v√©nements, bien qu'elle-m√™me ne remarquerait rien de particulier.</p>
+            </div>
 
-        function restartQuiz() {
-            currentQuestion = 0;
-            score = 0;
-            document.getElementById('question-container').classList.remove('hidden');
-            document.getElementById('result').classList.add('hidden');
-            loadQuestion();
-        }
+            <h3>Le Disque d'Accr√©tion</h3>
+            <p>La mati√®re qui tombe vers un trou noir forme un disque d'accr√©tion tournoyant autour de lui. La friction intense dans ce disque g√©n√®re des temp√©ratures de millions de degr√©s, produisant des rayonnements intenses dans tout le spectre √©lectromagn√©tique, des rayons X aux ondes radio.</p>
 
-        // Form submission
-        document.getElementById('ebook-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('? Merci ! Votre ebook "Les Secrets des Trous Noirs RÈvÈlÈs" est en cours de tÈlÈchargement...\n\nNote : Dans une version en production, ce formulaire serait connectÈ ‡ un service d\'email marketing et dÈclencherait le tÈlÈchargement rÈel du PDF.');
-            this.reset();
-        });
+            <h3>Les Jets Relativistes</h3>
+            <p>Certains trous noirs √©mettent des jets de particules √† des vitesses proches de celle de la lumi√®re, perpendiculaires au disque d'accr√©tion. Ces jets peuvent s'√©tendre sur des milliers d'ann√©es-lumi√®re et sont parmi les ph√©nom√®nes les plus √©nerg√©tiques de l'univers.</p>
+        </article>
 
-        // Initialize quiz
-        loadQuestion();
-    </script>
-</body>
-</html>
+        <div class="ad-space">Espace Publicitaire 3 - [Google AdSense 300x250]</div>
+
+        <article class="section">
+            <h2>Les Trous Noirs dans la Recherche Moderne</h2>
+            
+            <h3>Premi√®re Image d'un Trou Noir</h3>
+            <p>En avril 2019, le projet Event Horizon Telescope a r√©v√©l√© la premi√®re image directe d'un trou noir, situ√© au centre de la galaxie M87, √† 55 millions d'ann√©es-lumi√®re de la Terre. Cette image historique montre l'ombre du trou noir entour√©e par le disque d'accr√©tion lumineux.</p>
+            
+            <h3>D√©tection des Ondes Gravitationnelles</h3>
+            <p>La fusion de trous noirs cr√©e des ondulations dans le tissu de l'espace-temps appel√©es ondes gravitationnelles. Depuis 2015, les d√©tecteurs LIGO et Virgo ont observ√© de nombreuses fusions de trous noirs, ouvrant une nouvelle fen√™tre d'observation sur l'univers.</p>
+            
+            <h3>Le Trou Noir de la Voie Lact√©e</h3>
+            <p>Au centre de notre galaxie se trouve Sagittarius A*, un trou noir supermassif d'environ 4 millions de fois la masse du Soleil. En 2022, sa premi√®re image a √©t√© d√©voil√©e, confirmant des d√©cennies de recherches.</p>
+        </article>
+
+        <section class="
