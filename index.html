@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Hole Odyssey - Explorez les Mystères des Trous Noirs</title>
+    <meta name="description" content="Découvrez les secrets fascinants des trous noirs avec notre guide éducatif interactif. Quiz, animations et ebook gratuit !">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8); }
+        }
+        .float { animation: float 6s ease-in-out infinite; }
+        .rotate { animation: rotate 20s linear infinite; }
+        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+        .star { position: absolute; background: white; border-radius: 50%; opacity: 0.8; }
+        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .black-hole { 
+            width: 200px; 
+            height: 200px; 
+            background: radial-gradient(circle, transparent 30%, #000 50%, #1a0033 100%);
+            border-radius: 50%;
+            position: relative;
+        }
+        .accretion-disk {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            border-top-color: #f59e0b;
+            border-right-color: #f59e0b;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-gray-900 via-purple-900 to-black text-white">
+    <!-- Stars Background -->
+    <div id="stars" class="fixed inset-0 overflow-hidden pointer-events-none"></div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center px-4">
+        <div class="max-w-6xl mx-auto text-center z-10">
+            <div class="black-hole mx-auto mb-8 float pulse-glow">
+                <div class="accretion-disk rotate"></div>
+                <div class="accretion-disk rotate" style="animation-delay: -10s;"></div>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 gradient-text">Black Hole Odyssey</h1>
+            <p class="text-xl md:text-2xl mb-8 text-purple-200">Plongez dans l'univers fascinant des trous noirs</p>
+            <button onclick="scrollToSection('education')" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105 shadow-2xl">
+                Commencer l'Exploration ??
+            </button>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-4 relative">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-16 gradient-text">Qu'est-ce qu'un Trou Noir ?</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gradient-to-br from-purple-900/50 to-blue-900/50 p-8 rounded-2xl backdrop-blur border border-purple-500/30 hover:scale-105 transition">
+                    <div class="text-5xl mb-4">??</div>
+                    <h3 class="text-2xl font-bold mb-4">Formation</h3>
+                    <p class="text-purple-200">Les trous noirs se forment lors de l'effondrement gravitationnel d'étoiles massives en fin de vie, créant une singularité où la gravité devient infiniment forte.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-900/50 to-purple-900/50 p-8 rounded-2xl backdrop-blur border border-blue-500/30 hover:scale-105 transition">
+                    <div class="text-5xl mb-4">?</div>
+                    <h3 class="text-2xl font-bold mb-4">Horizon des Événements</h3>
+                    <p class="text-purple-200">C'est la limite de non-retour au-delà de laquelle même la lumière ne peut s'échapper. Une fois franchie, rien ne peut revenir en arrière.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-900/50 to-pink-900/50 p-8 rounded-2xl backdrop-blur border border-pink-500/30 hover:scale-105 transition">
+                    <div class="text-5xl mb-4">??</div>
+                    <h3 class="text-2xl font-bold mb-4">Disque d'Accrétion</h3>
+                    <p class="text-purple-200">La matière en orbite autour du trou noir forme un disque brillant qui émet d'intenses radiations avant d'être aspirée à jamais.</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-purple-800/30 to-pink-800/30 p-8 md:p-12 rounded-3xl backdrop-blur border border-purple-400/30">
+                <h3 class="text-3xl font-bold mb-6">Types de Trous Noirs</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-black/40 p-6 rounded-xl">
+                        <h4 class="text-xl font-bold mb-3 text-yellow-400">?? Trous Noirs Stellaires</h4>
+                        <p class="text-purple-200">Masse de 3 à 100 fois celle du Soleil. Formés par l'effondrement d'étoiles massives.</p>
+                    </div>
+                    <div class="bg-black/40 p-6 rounded-xl">
+                        <h4 class="text-xl font-bold mb-3 text-blue-400">?? Trous Noirs Supermassifs</h4>
+                        <p class="text-purple-200">Millions à milliards de masses solaires. Situés au centre des galaxies, dont la nôtre.</p>
+                    </div>
+                    <div class="bg-black/40 p-6 rounded-xl">
+                        <h4 class="text-xl font-bold mb-3 text-green-400">?? Trous Noirs Intermédiaires</h4>
+                        <p class="text-purple-200">Entre 100 et 100 000 masses solaires. Leur existence est encore débattue.</p>
+                    </div>
+                    <div class="bg-black/40 p-6 rounded-xl">
+                        <h4 class="text-xl font-bold mb-3 text-purple-400">?? Trous Noirs Primordiaux</h4>
+                        <p class="text-purple-200">Théoriquement formés peu après le Big Bang. Encore jamais observés.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="py-20 px-4 relative bg-black/40">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-12 gradient-text">Testez Vos Connaissances ??</h2>
+            
+            <div id="quiz-container" class="bg-gradient-to-br from-purple-900/50 to-blue-900/50 p-8 rounded-3xl backdrop-blur border border-purple-500/30">
+                <div id="question-container">
+                    <h3 class="text-2xl font-bold mb-6" id="question"></h3>
+                    <div id="answers" class="space-y-4"></div>
+                </div>
+                <div id="result" class="hidden">
+                    <h3 class="text-3xl font-bold mb-4">Résultats</h3>
+                    <p class="text-xl mb-6" id="score"></p>
+                    <button onclick="restartQuiz()" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-full font-semibold transition">
+                        Recommencer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="ebook" class="py-20 px-4 relative">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="bg-gradient-to-br from-purple-800/40 to-pink-800/40 p-12 rounded-3xl backdrop-blur border border-purple-400/40 shadow-2xl">
+                <div class="text-6xl mb-6">??</div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Votre Guide Gratuit</h2>
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">Les Secrets des Trous Noirs Révélés</h3>
+                <p class="text-xl text-purple-200 mb-8">Téléchargez notre ebook exclusif de 50 pages et devenez un expert des phénomènes les plus mystérieux de l'univers !</p>
+                
+                <div class="max-w-md mx-auto mb-8">
+                    <ul class="text-left space-y-3">
+                        <li class="flex items-center">
+                            <span class="text-green-400 mr-3">?</span>
+                            <span>Comprendre la relativité générale</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-400 mr-3">?</span>
+                            <span>Les dernières découvertes scientifiques</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-400 mr-3">?</span>
+                            <span>Images et schémas explicatifs</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-400 mr-3">?</span>
+                            <span>Les trous de ver et voyages temporels</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <form id="ebook-form" class="max-w-md mx-auto space-y-4">
+                    <input type="text" placeholder="Votre prénom" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-purple-400/50 text-white placeholder-purple-300 focus:outline-none focus:border-purple-400">
+                    <input type="email" placeholder="Votre email" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-purple-400/50 text-white placeholder-purple-300 focus:outline-none focus:border-purple-400">
+                    <button type="submit" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-8 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
+                        Télécharger Gratuitement ??
+                    </button>
+                </form>
+                
+                <p class="text-sm text-purple-300 mt-4">100% gratuit • Aucune carte bancaire requise</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 border-t border-purple-500/30">
+        <div class="max-w-6xl mx-auto text-center text-purple-300">
+            <p>© 2025 Black Hole Odyssey - Explorez l'Univers avec Passion</p>
+        </div>
+    </footer>
+
+    <script>
+        // Generate stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.width = Math.random() * 3 + 'px';
+            star.style.height = star.style.width;
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+
+        // Smooth scroll
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Quiz data
+        const quizData = [
+            {
+                question: "Qu'est-ce qui se passe au centre d'un trou noir ?",
+                answers: [
+                    { text: "Une singularité de densité infinie", correct: true },
+                    { text: "Un vortex temporel", correct: false },
+                    { text: "Une étoile compressée", correct: false },
+                    { text: "Un portail vers une autre dimension", correct: false }
+                ]
+            },
+            {
+                question: "Quelle est la vitesse nécessaire pour échapper à un trou noir ?",
+                answers: [
+                    { text: "La vitesse du son", correct: false },
+                    { text: "Plus rapide que la lumière", correct: true },
+                    { text: "10 000 km/s", correct: false },
+                    { text: "C'est impossible", correct: false }
+                ]
+            },
+            {
+                question: "Qui a prédit l'existence des trous noirs ?",
+                answers: [
+                    { text: "Isaac Newton", correct: false },
+                    { text: "Stephen Hawking", correct: false },
+                    { text: "Albert Einstein (via la relativité générale)", correct: true },
+                    { text: "Galileo Galilei", correct: false }
+                ]
+            },
+            {
+                question: "Quel est le trou noir le plus proche de la Terre ?",
+                answers: [
+                    { text: "Sagittarius A*", correct: false },
+                    { text: "Cygnus X-1", correct: false },
+                    { text: "Gaia BH1 (environ 1600 années-lumière)", correct: true },
+                    { text: "M87*", correct: false }
+                ]
+            },
+            {
+                question: "Que se passerait-il si vous tombiez dans un trou noir ?",
+                answers: [
+                    { text: "Vous seriez instantanément vaporisé", correct: false },
+                    { text: "Vous seriez étiré par les forces de marée (spaghettification)", correct: true },
+                    { text: "Vous voyageriez dans le temps", correct: false },
+                    { text: "Vous entreriez dans un univers parallèle", correct: false }
+                ]
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            const question = quizData[currentQuestion];
+            document.getElementById('question').textContent = `Question ${currentQuestion + 1}/${quizData.length}: ${question.question}`;
+            
+            const answersContainer = document.getElementById('answers');
+            answersContainer.innerHTML = '';
+            
+            question.answers.forEach((answer, index) => {
+                const button = document.createElement('button');
+                button.className = 'w-full p-4 rounded-xl bg-purple-700/30 hover:bg-purple-600/50 border border-purple-500/50 transition text-left';
+                button.textContent = answer.text;
+                button.onclick = () => selectAnswer(answer.correct);
+                answersContainer.appendChild(button);
+            });
+        }
+
+        function selectAnswer(correct) {
+            if (correct) score++;
+            currentQuestion++;
+            
+            if (currentQuestion < quizData.length) {
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('question-container').classList.add('hidden');
+            document.getElementById('result').classList.remove('hidden');
+            
+            const percentage = (score / quizData.length) * 100;
+            let message = '';
+            
+            if (percentage === 100) {
+                message = '?? Parfait ! Vous êtes un expert des trous noirs !';
+            } else if (percentage >= 60) {
+                message = '?? Très bien ! Vous avez de solides connaissances !';
+            } else {
+                message = '?? Continuez à apprendre, l\'univers vous attend !';
+            }
+            
+            document.getElementById('score').innerHTML = `Vous avez obtenu <strong>${score}/${quizData.length}</strong> bonnes réponses !<br><br>${message}`;
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('question-container').classList.remove('hidden');
+            document.getElementById('result').classList.add('hidden');
+            loadQuestion();
+        }
+
+        // Form submission
+        document.getElementById('ebook-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('? Merci ! Votre ebook "Les Secrets des Trous Noirs Révélés" est en cours de téléchargement...\n\nNote : Dans une version en production, ce formulaire serait connecté à un service d\'email marketing et déclencherait le téléchargement réel du PDF.');
+            this.reset();
+        });
+
+        // Initialize quiz
+        loadQuestion();
+    </script>
+</body>
+</html>
